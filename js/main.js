@@ -30,14 +30,14 @@ function main()
         video.src = url.createObjectURL(stream);
         video.play();
 
-        button.disabled = false;
+        var ctx = canvas.getContext('2d');
 
-        /*
+        button.disabled = false;
         button.onclick = function() {
-            canvas.getContext('2d')
-                .drawImage(video, 0, 0, 300, 300, 0, 0, 300, 300);
+            // TODO: calculate width/height dynamically
+            ctx.drawImage(video, 0, 0, 640, 480, 0, 0, 300, 225);
+            // now image data is in the canvas element
         };
-        */
     }, function(err) {
         alert('there was an error');
     });
