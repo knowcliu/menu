@@ -1,19 +1,31 @@
 <!doctype html>
-<html lang="">
+<html lang="en">
     <head>
         <meta charset="utf-8">
         <title>Menu</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="style.css" media="screen" />
     </head>
     <body>
-        <video id="video-id" width="300" height="300"></video>
-        <input id="button-id" type="button" disabled="true" value="Take Picture"></input>
-        <canvas id="canvas-id" width="300" height="300"></canvas>
-        <!--
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/{{JQUERY_VERSION}}/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-{{JQUERY_VERSION}}.min.js"><\/script>')</script>
-        -->
-        <script src="js/main.js"></script>
+        <header>
+            <h1>Show me something with words on it...</h1>
+        </header>
+        <section id="video-section">
+            <video id="video-id" height="225" width="300"></video>
+            <button id="button-id" disabled="true">Take Picture"</button>
+        </section>
+        <section id="snapshot-section">
+            <canvas id="canvas-id" height="225" width="300"></canvas>
+        </section>
+        <section id="results-section">
+            <div id="results-id"></div>
+        </section>
+        <script type="text/javascript" src="js/glfx.js"></script>
+        <script type="text/javascript" src="js/ocrad.js"></script>
+        <script type="text/javascript" src="js/secrets.js"></script>
+        <script type="text/javascript" src="js/goog.js"></script>
+        <script src="https://apis.google.com/js/client.js?onload=init"></script>
+        <script type="text/javascript" src="js/main.js"></script>
     </body>
 </html>
